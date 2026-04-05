@@ -14,22 +14,6 @@
 - Glassmorphism dark UI with Syne + Space Mono fonts
 - Mobile-first responsive design
 
-## Deploy on Vercel
-
-### Option 1: Vercel CLI
-```bash
-npm i -g vercel
-cd gifsforgenz
-vercel
-```
-
-### Option 2: GitHub + Vercel Dashboard
-1. Push this folder to a GitHub repo
-2. Go to [vercel.com](https://vercel.com) → New Project
-3. Import the repo
-4. Framework Preset: **Other**
-5. Output Directory: `.` (root)
-6. Deploy!
 
 ## File Structure
 ```
