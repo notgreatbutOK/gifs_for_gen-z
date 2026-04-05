@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GIFsForGenZ — GIFs That Hit Different</title>
+  <meta name="description" content="Discover trending GIFs curated for Gen Z. Relatable, Sigma, Cringe, Gaming & more." />
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <!-- Background -->
+  <div class="mesh-bg" aria-hidden="true"></div>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <a href="index.html" class="nav-logo">
+      <span class="logo-text">GIFsForGenZ</span>
+    </a>
+
+    <div class="nav-search">
+      <input class="nav-search-input" type="search" placeholder="Search GIFs…" />
+    </div>
+
+    <div class="nav-links">
+      <a href="index.html" class="nav-link active">Home</a>
+      <a href="search.html" class="nav-link">Trending</a>
+      <a href="category.html" class="nav-link">Categories</a>
+    </div>
+  </nav>
+
+  <!-- Main -->
+  <main>
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-badge">
+        <span class="dot"></span>
+        Live trending GIFs
+      </div>
+
+      <h1 class="hero-title">
+        GIFs That<br/><span class="grad">Hit Different</span>
+      </h1>
+
+      <p class="hero-sub">
+        No cap. All the GIFs your group chat actually needs. 🔥
+      </p>
+
+      <!-- SEARCH -->
+      <div class="search-bar">
+        <input
+          id="heroSearch"
+          type="search"
+          placeholder="Search anything… 'sigma grindset', 'cringe'…"
+          autocomplete="off"
+        />
+        <button id="heroSearchBtn" class="search-btn">
+          🔍
+        </button>
+      </div>
+
+      <!-- TRENDING TAGS -->
+      <div class="trending-tags">
+        <span>🔥 Trending:</span>
+        <a href="search.html?q=sigma">#sigma</a>
+        <a href="search.html?q=cringe">#cringe</a>
+        <a href="search.html?q=relatable">#relatable</a>
+        <a href="search.html?q=mood">#mood</a>
+      </div>
+    </section>
+
+    <!-- CONTENT -->
+    <div class="container">
+
+      <!-- Categories -->
+      <div class="section">
+        <div class="section-header">
+          <h2 class="section-title">🗂️ Categories</h2>
+          <a href="category.html" class="section-link">See all →</a>
+        </div>
+
+        <div class="categories-row">
+          <a href="category.html?cat=relatable" class="cat-chip">💀 Relatable</a>
+          <a href="category.html?cat=angry" class="cat-chip">😤 Angry</a>
+          <a href="category.html?cat=sigma" class="cat-chip">🗿 Sigma</a>
+          <a href="category.html?cat=cringe" class="cat-chip">😬 Cringe</a>
+          <a href="category.html?cat=study" class="cat-chip">📚 Study</a>
+          <a href="category.html?cat=gaming" class="cat-chip">🎮 Gaming</a>
+          <a href="category.html?cat=vibes" class="cat-chip">✨ Vibes</a>
+          <a href="category.html?cat=wholesome" class="cat-chip">🥺 Wholesome</a>
+        </div>
+      </div>
+
+      <!-- Trending -->
+      <div class="section">
+        <div class="section-header">
+          <h2 class="section-title">🔥 Trending Now</h2>
+          <a href="search.html" class="section-link">View all →</a>
+        </div>
+
+        <div class="gif-grid" id="trendingGrid"></div>
+
+        <div class="load-more-wrap" style="margin-top:32px">
+          <a href="search.html" class="btn btn-primary">
+            See More Trending
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-logo">GIFsForGenZ</div>
+    <div class="footer-copy">© 2025 · Powered by GIPHY · Built for the culture</div>
+  </footer>
+
+  <script src="js/api.js"></script>
+  <script src="js/main.js"></script>
+
+</body>
+</html>

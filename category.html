@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Categories — GIFsForGenZ</title>
+  <meta name="description" content="Browse GIFs by category: Relatable, Sigma, Cringe, Gaming and more." />
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <div class="mesh-bg" aria-hidden="true"></div>
+
+  <!-- ── Navbar ─────────────────────────────────────── -->
+  <nav class="navbar">
+    <a href="index.html" class="nav-logo">
+      <span class="logo-text">GIFsForGenZ</span>
+    </a>
+    <div class="nav-search">
+      <input class="nav-search-input" type="search" placeholder="Search GIFs…" aria-label="Search GIFs" />
+    </div>
+    <div class="nav-links">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="search.html" class="nav-link">Trending</a>
+      <a href="category.html" class="nav-link active">Categories</a>
+    </div>
+  </nav>
+
+  <!-- ── Main ──────────────────────────────────────── -->
+  <main>
+    <div class="container">
+
+      <!-- Page Title -->
+      <div class="category-hero">
+        <h1 class="hero-title" style="font-size:clamp(2rem,6vw,4rem)">
+          Browse by <span class="grad">Vibe</span>
+        </h1>
+        <p class="hero-sub" style="margin-top:12px">Pick your mood. We got the GIF for it.</p>
+      </div>
+
+      <!-- Category Cards -->
+      <div class="category-grid" id="categoryCardGrid">
+        <!-- Populated by category.js -->
+      </div>
+
+      <!-- Category Filter Chips (shown when a cat is selected) -->
+      <div id="catGifSection" style="display:none">
+        <div class="categories-scroll" style="margin-bottom:24px">
+          <div class="categories-row" id="catChipsRow">
+            <!-- Populated by category.js -->
+          </div>
+        </div>
+
+        <div class="section-header">
+          <h2 class="section-title" id="catSectionTitle">GIFs</h2>
+        </div>
+
+        <!-- GIF Grid -->
+        <div class="gif-grid" id="catGifGrid"></div>
+
+        <div class="load-more-wrap">
+          <button id="catLoadMore" class="btn btn-primary" style="display:none">Load More</button>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- ── Footer ─────────────────────────────────────── -->
+  <footer>
+    <div class="footer-logo">GIFsForGenZ</div>
+    <div class="footer-copy">© 2025 · Powered by GIPHY · Built for the culture</div>
+  </footer>
+
+  <script src="js/api.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/category.js"></script>
+</body>
+</html>

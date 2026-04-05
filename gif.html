@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GIF — GIFsForGenZ</title>
+  <meta name="description" content="View and share this GIF on GIFsForGenZ" />
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <div class="mesh-bg" aria-hidden="true"></div>
+
+  <!-- ── Navbar ─────────────────────────────────────── -->
+  <nav class="navbar">
+    <a href="index.html" class="nav-logo">
+      <span class="logo-text">GIFsForGenZ</span>
+    </a>
+    <div class="nav-search">
+      <input class="nav-search-input" type="search" placeholder="Search GIFs…" aria-label="Search GIFs" />
+    </div>
+    <div class="nav-links">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="search.html" class="nav-link">Trending</a>
+      <a href="category.html" class="nav-link">Categories</a>
+    </div>
+  </nav>
+
+  <!-- ── Main ──────────────────────────────────────── -->
+  <main>
+    <div class="container">
+
+      <!-- Back link -->
+      <div style="padding: 24px 0 0">
+        <a href="javascript:history.back()" class="btn btn-ghost" style="display:inline-flex;gap:6px;padding:8px 16px;font-size:0.85rem">
+          <svg viewBox="0 0 24 24" stroke-width="2" width="16" height="16" stroke="currentColor" fill="none"><polyline points="15 18 9 12 15 6"/></svg>
+          Back
+        </a>
+      </div>
+
+      <!-- Detail Layout -->
+      <div class="gif-detail">
+
+        <!-- Left: GIF Image -->
+        <div class="gif-detail-main">
+          <div class="gif-detail-img-wrap" id="gifDetailImgWrap">
+            <!-- Populated by gif.js -->
+          </div>
+        </div>
+
+        <!-- Right: Sidebar -->
+        <div class="gif-detail-sidebar">
+
+          <!-- Info Card -->
+          <div class="detail-card">
+            <div class="detail-label">Now Playing</div>
+            <div class="detail-title" id="gifDetailTitle">Loading…</div>
+            <div style="font-size:0.78rem; color:var(--text-muted); font-family:var(--font-mono)">
+              via <span id="gifDetailSource">GIPHY</span>
+            </div>
+          </div>
+
+          <!-- Actions Card -->
+          <div class="detail-card">
+            <div class="detail-label">Share this GIF</div>
+            <div class="detail-actions">
+
+              <button id="gifCopyBtn" class="btn btn-primary">
+                <svg viewBox="0 0 24 24" stroke-width="2">
+                  <rect x="9" y="9" width="13" height="13" rx="2" ry="2"/>
+                  <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+                </svg>
+                Copy GIF Link
+              </button>
+
+              <button id="gifDownloadBtn" class="btn btn-ghost">
+                <svg viewBox="0 0 24 24" stroke-width="2">
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                  <polyline points="7 10 12 15 17 10"/>
+                  <line x1="12" y1="15" x2="12" y2="3"/>
+                </svg>
+                Download GIF
+              </button>
+
+              <button id="gifShareBtn" class="btn btn-ghost" style="background:rgba(37,211,102,0.12);border-color:rgba(37,211,102,0.3);color:#25d366">
+                <svg viewBox="0 0 24 24" stroke-width="2" stroke="#25d366" fill="none">
+                  <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+                </svg>
+                Share on WhatsApp
+              </button>
+
+            </div>
+          </div>
+
+          <!-- Tags Card -->
+          <div class="detail-card">
+            <div class="detail-label">Tags</div>
+            <div class="tags-wrap" id="gifDetailTags">
+              <!-- Populated by gif.js -->
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Related GIFs -->
+      <div class="section">
+        <div class="section-header">
+          <h2 class="section-title"><span class="emoji">🔁</span> You Might Also Like</h2>
+        </div>
+        <div class="gif-grid" id="relatedGrid"></div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- ── Footer ─────────────────────────────────────── -->
+  <footer>
+    <div class="footer-logo">GIFsForGenZ</div>
+    <div class="footer-copy">© 2025 · Powered by GIPHY · Built for the culture</div>
+  </footer>
+
+  <script src="js/api.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/gif.js"></script>
+</body>
+</html>

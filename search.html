@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Search — GIFsForGenZ</title>
+  <meta name="description" content="Search millions of GIFs on GIFsForGenZ" />
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <div class="mesh-bg" aria-hidden="true"></div>
+
+  <!-- ── Navbar ─────────────────────────────────────── -->
+  <nav class="navbar">
+    <a href="index.html" class="nav-logo">
+      <span class="logo-text">GIFsForGenZ</span>
+    </a>
+    <div class="nav-search">
+      <input class="nav-search-input" type="search" placeholder="Search GIFs…" aria-label="Search GIFs" />
+    </div>
+    <div class="nav-links">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="search.html" class="nav-link active">Trending</a>
+      <a href="category.html" class="nav-link">Categories</a>
+    </div>
+  </nav>
+
+  <!-- ── Main ──────────────────────────────────────── -->
+  <main>
+    <div class="container">
+
+      <!-- Search Bar -->
+      <div class="search-page-header">
+        <div id="recentSearchBox" class="recent-search"></div>
+        <div class="search-bar search-page-bar">
+          <input
+            id="searchPageInput"
+            type="search"
+            placeholder="Search GIFs…"
+            autocomplete="off"
+            aria-label="Search GIFs"
+          />
+          <button id="searchPageBtn" class="search-btn" aria-label="Search">
+            <svg viewBox="0 0 24 24" stroke-width="2.5">
+              <circle cx="11" cy="11" r="8"/>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+      <div class="quick-search">
+  <span>Try:</span>
+  <a href="search.html?q=funny">funny</a>
+  <a href="search.html?q=sigma">sigma</a>
+  <a href="search.html?q=cringe">cringe</a>
+  <a href="search.html?q=anime">anime</a>
+</div>
+
+      <!-- Results Meta -->
+      <div class="search-meta">
+        <div class="search-meta-query" id="searchResultsTitle">
+          Results for "<span id="searchQueryDisplay"></span>"
+        </div>
+        <div class="search-count" id="resultCount"></div>
+      </div>
+
+      <!-- GIF Grid -->
+      <div class="gif-grid" id="searchGrid">
+        <!-- Populated by search.js -->
+      </div>
+
+      <!-- Load More -->
+      <div class="load-more-wrap">
+        <button id="loadMoreBtn" class="btn btn-primary" style="display:none">
+          Load More
+        </button>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- ── Footer ─────────────────────────────────────── -->
+  <footer>
+    <div class="footer-logo">GIFsForGenZ</div>
+    <div class="footer-copy">© 2025 · Powered by GIPHY · Built for the culture</div>
+  </footer>
+
+  <script src="js/api.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/search.js"></script>
+</body>
+</html>
